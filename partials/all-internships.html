@@ -1,0 +1,23 @@
+Here you will see all the internships... in a little while...
+<div>
+    <button class="btn btn-primary pull-right" ui-sref="new-internship">
+        Create New Internship
+    </button>
+
+    <div ng-repeat="visit in internshipVisits" class="col-xs-6"
+         ng-click="editInternship(visit)">
+        <label>Initials</label> {{visit.initials}}
+    </div>
+
+
+    <div>
+        <button class="btn btn-default" ui-sref="all-internships.subview1">
+            Subview 1
+        </button>
+        <button class="btn btn-default" ui-sref="all-internships.subview2">
+            Subview 2
+        </button>
+    </div>
+
+    <div ui-view></div>
+</div>

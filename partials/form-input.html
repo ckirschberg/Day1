@@ -1,0 +1,79 @@
+<form novalidate name="visitForm" ng-submit="saveVisit()">
+
+    <h3 class="headerAlignCenter">New Internship Visit</h3>
+
+    <div class="form-group">
+        <div class="col-sm-6">
+
+            <div class="error"
+                 ng-show="visitForm.initials.$error.required && visitForm.$submitted" >
+                The initials field is required
+            </div>
+
+            <div class="error"
+                 ng-show="visitForm.initials.$invalid && visitForm.$dirty
+&& visitForm.$submitted">
+                You must enter 4 characters
+            </div>
+            <label>Your initials</label>
+            <input type="text" class="form-control"
+                   ng-model="visit.initials" name="initials"
+                   required ng-minlength="4" />
+        </div>
+        <div class="col-sm-6">
+            <label>Date</label>
+            <input type="text" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-6">
+            <label>Name of student</label>
+            <input type="text" class="form-control"/>
+        </div>
+        <div class="col-sm-6">
+            <label>ID of student (from email)</label>
+            <input type="text" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-6">
+            <label>People you met</label>
+            <input type="text" class="form-control"/>
+        </div>
+        <div class="col-sm-6">
+            <label>Company you visited</label>
+            <input type="text" class="form-control"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-6">
+            <label>Company's view on trends</label>
+            <textarea class="form-control" rows="4"></textarea>
+        </div>
+        <div class="col-sm-6">
+            <label>Company's requirements for competencies</label>
+            <textarea class="form-control" rows="4"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-6">
+            <label>Students competencies</label>
+            <textarea class="form-control" rows="4"></textarea>
+        </div>
+        <div class="col-sm-6">
+            <label>Cooperation - possibilities</label>
+            <textarea class="form-control" rows="4"></textarea>
+        </div>
+    </div>
+    <div class="form-group col-xs-12">
+        <label>Etc.</label>
+        <textarea class="form-control" rows="2"></textarea>
+    </div>
+    <div class="col-xs-12">
+        <button type="submit" class="btn btn-primary pull-right">
+            Save
+        </button>
+        <button type="button" class="btn btn-default">Back</button>
+        <button type="button" class="btn btn-danger">Delete</button>
+    </div>
+</form>
