@@ -12,6 +12,8 @@ app.controller("internshipDataEntryController",
 
                 //if () { //new
 
+                //http
+
                 $scope.visit.id = $scope.$parent.internshipVisits.length +1;
 
                 $scope.$parent.
