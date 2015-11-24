@@ -24,8 +24,13 @@
     <script src="js/navigation.js"></script>
     <script src="js/services/testService.js"></script>
     <script src="js/services/logService.js"></script>
+    <script src="js/directives/unorderedList/unorderedList.js"></script>
 </head>
 <body ng-controller="topLevelController">
+
+    <div unordered-list="products" list-property="price"></div>
+
+
     <nav class="top-menu">
         <div data-toggle="offcanvas" data-target=".side-menu" data-canvas="body">
             Menu

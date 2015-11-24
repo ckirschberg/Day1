@@ -6,6 +6,14 @@ angular.module("internship").controller("topLevelController",
     ["$scope", "$http", "$resource", 'testService', 'logService', '$log',
         function($scope, $http, $resource, testService, logService, $log) {
 
+
+        $scope.products = [
+                {name: "Apples", category: "Fruit" , price: 1.2 },
+                {name: "Oranges", category: "Fruit" , price: 2.2 },
+                {name: "Pineapple", category: "Fruit" , price: 1.6 }
+
+        ];
+
         var obj = {name: "Per"};
         $log.debug("Hello from Angulars log service", obj);
 
@@ -23,11 +31,11 @@ angular.module("internship").controller("topLevelController",
                 alert(reason);
         });
 
-        internshipsService.getInternships().then(function(data) {
-                $scope.internships = data;
-        }, function(error) {
-                //handle error (eg. network is down).
-        });
+        //internshipsService.getInternships().then(function(data) {
+        //        $scope.internships = data;
+        //}, function(error) {
+        //        //handle error (eg. network is down).
+        //});
 
         //console.log("Hello from top level controller");
 
