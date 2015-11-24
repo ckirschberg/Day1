@@ -3,7 +3,9 @@
  */
 
 angular.module("internship").config(
-    function($stateProvider, $urlRouterProvider) {
+    function($stateProvider, $urlRouterProvider, $logProvider) {
+
+        $logProvider.debugEnabled(true);
 
         $urlRouterProvider.otherwise("all-internships");
 

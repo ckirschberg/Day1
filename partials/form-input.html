@@ -22,58 +22,58 @@
         </div>
         <div class="col-sm-6">
             <label>Date</label>
-            <input type="text" class="form-control"/>
+            <input type="text" class="form-control" ng-model="visit.date"/>
         </div>
     </div>
     <div class="form-group">
         <div class="col-sm-6">
             <label>Name of student</label>
-            <input type="text" class="form-control"/>
+            <input type="text" class="form-control" ng-model="visit.studentName"/>
         </div>
         <div class="col-sm-6">
             <label>ID of student (from email)</label>
-            <input type="text" class="form-control"/>
+            <input type="text" class="form-control" ng-model="visit.studentId"/>
         </div>
     </div>
     <div class="form-group">
         <div class="col-sm-6">
             <label>People you met</label>
-            <input type="text" class="form-control"/>
+            <input type="text" class="form-control" ng-model="visit.people"/>
         </div>
         <div class="col-sm-6">
             <label>Company you visited</label>
-            <input type="text" class="form-control"/>
+            <input type="text" class="form-control" ng-model="visit.company"/>
         </div>
     </div>
     <div class="form-group">
         <div class="col-sm-6">
             <label>Company's view on trends</label>
-            <textarea class="form-control" rows="4"></textarea>
+            <textarea class="form-control" rows="4" ng-model="visit.trends"></textarea>
         </div>
         <div class="col-sm-6">
             <label>Company's requirements for competencies</label>
-            <textarea class="form-control" rows="4"></textarea>
+            <textarea class="form-control" rows="4" ng-model="visit.requirements"></textarea>
         </div>
     </div>
     <div class="form-group">
         <div class="col-sm-6">
             <label>Students competencies</label>
-            <textarea class="form-control" rows="4"></textarea>
+            <textarea class="form-control" rows="4" ng-model="visit.competencies"></textarea>
         </div>
         <div class="col-sm-6">
             <label>Cooperation - possibilities</label>
-            <textarea class="form-control" rows="4"></textarea>
+            <textarea class="form-control" rows="4" ng-model="visit.cooperation"></textarea>
         </div>
     </div>
     <div class="form-group col-xs-12">
         <label>Etc.</label>
-        <textarea class="form-control" rows="2"></textarea>
+        <textarea class="form-control" rows="2" ng-model="visit.etc"></textarea>
     </div>
     <div class="col-xs-12">
         <button type="submit" class="btn btn-primary pull-right">
             Save
         </button>
         <button type="button" class="btn btn-default">Back</button>
-        <button type="button" class="btn btn-danger">Delete</button>
+        <button type="button" class="btn btn-danger" ng-click="deleteVisit(visit)">Delete</button>
     </div>
 </form>

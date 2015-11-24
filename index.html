@@ -11,15 +11,19 @@
 
     <script src="bower_components/angular/angular.js" type="text/javascript"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
 
 
     <script type="text/javascript">
-        angular.module("internship", ['ui.router']);
+        angular.module("internship", ['ui.router', 'ngResource']);
     </script>
     <script src="js/controllers/internshipDataEntryController.js" type="text/javascript"></script>
     <script src="js/controllers/topLevelController.js"></script>
     <script src="js/controllers/allInternshipsController.js"></script>
     <script src="js/navigation.js"></script>
+    <script src="js/services/testService.js"></script>
+    <script src="js/services/logService.js"></script>
 </head>
 <body ng-controller="topLevelController">
     <nav class="top-menu">
